@@ -18,7 +18,7 @@
 ## 📋 PR Sequence
 
 ### ✅ PR #1 — Project Initialization
-**Status**: `IN PROGRESS`
+**Status**: `COMPLETE ✅`
 
 **Objective**: Create a clean, professional repository foundation.
 
@@ -30,13 +30,13 @@
 - [x] Add PR_PLAN.md
 
 **Acceptance Criteria**:
-- [ ] Repo clones with no errors
-- [ ] No build tooling assumptions yet
+- [x] Repo clones with no errors
+- [x] No build tooling assumptions yet
 
 ---
 
-### ⏳ PR #2 — Identity Contract
-**Status**: `PENDING`
+### ✅ PR #2 — Identity Contract
+**Status**: `IN PROGRESS`
 
 **File**: `contracts/Identity.sol`
 

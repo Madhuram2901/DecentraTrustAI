@@ -1,0 +1,36 @@
+{
+  "name": "decentratrust-ai",
+  "version": "1.0.0",
+  "description": "AI-Powered Decentralized Reputation & Trust Enforcement System",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "clean": "hardhat clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madhuram2901/DecentraTrustAI.git"
+  },
+  "keywords": [
+    "blockchain",
+    "ai",
+    "reputation",
+    "trust",
+    "ethereum",
+    "solidity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Madhuram2901/DecentraTrustAI/issues"
+  },
+  "homepage": "https://github.com/Madhuram2901/DecentraTrustAI#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  }
+}
