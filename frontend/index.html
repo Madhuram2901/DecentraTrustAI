@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DecentraTrust AI - AI-Powered Decentralized Reputation & Trust Enforcement System">
+    <title>DecentraTrust AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">🛡️</div>
+                <h1>DecentraTrust <span class="highlight">AI</span></h1>
+            </div>
+            <div class="wallet-section">
+                <button id="connectWallet" class="btn btn-primary">
+                    <span class="btn-icon">🔗</span>
+                    Connect Wallet
+                </button>
+                <div id="walletInfo" class="wallet-info hidden">
+                    <span class="wallet-address" id="walletAddress"></span>
+                    <button id="disconnectWallet" class="btn btn-ghost">Disconnect</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2>Decentralized Trust, <span class="gradient-text">Powered by AI</span></h2>
+                <p>Your on-chain reputation score determines your access tier in the ecosystem</p>
+            </section>
+
+            <!-- Stats Dashboard -->
+            <section class="dashboard" id="dashboard">
+                <!-- Trust Score Card -->
+                <div class="card score-card">
+                    <div class="card-header">
+                        <h3>Trust Score</h3>
+                        <span class="card-icon">📊</span>
+                    </div>
+                    <div class="score-display">
+                        <div class="score-circle" id="scoreCircle">
+                            <svg viewBox="0 0 100 100">
+                                <circle class="score-bg" cx="50" cy="50" r="45"/>
+                                <circle class="score-progress" id="scoreProgress" cx="50" cy="50" r="45"/>
+                            </svg>
+                            <div class="score-value">
+                                <span id="scoreNumber">--</span>
+                                <span class="score-max">/100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="score-meta">
+                        <span class="last-updated" id="lastUpdated">Connect wallet to view score</span>
+                    </div>
+                </div>
+
+                <!-- Access Tier Card -->
+                <div class="card tier-card">
+                    <div class="card-header">
+                        <h3>Access Tier</h3>
+                        <span class="card-icon">🎯</span>
+                    </div>
+                    <div class="tier-display">
+                        <div class="tier-badge" id="tierBadge">
+                            <span class="tier-icon">🔒</span>
+                            <span class="tier-name" id="tierName">UNKNOWN</span>
+                        </div>
+                        <p class="tier-description" id="tierDescription">
+                            Connect your wallet to see your access tier
+                        </p>
+                    </div>
+                    <div class="tier-legend">
+                        <div class="legend-item">
+                            <span class="legend-dot full"></span>
+                            <span>FULL (≥80)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot limited"></span>
+                            <span>LIMITED (50-79)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-dot blocked"></span>
+                            <span>BLOCKED (&lt;50)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions Card -->
+                <div class="card actions-card">
+                    <div class="card-header">
+                        <h3>Actions</h3>
+                        <span class="card-icon">⚡</span>
+                    </div>
+                    <div class="actions-list">
+                        <button class="action-btn" id="refreshScore" disabled>
+                            <span class="action-icon">🔄</span>
+                            <span>Refresh Score</span>
+                        </button>
+                        <button class="action-btn" id="viewHistory" disabled>
+                            <span class="action-icon">📜</span>
+                            <span>View History</span>
+                        </button>
+                        <button class="action-btn" id="requestEvaluation" disabled>
+                            <span class="action-icon">🤖</span>
+                            <span>Request AI Evaluation</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Section -->
+            <section class="info-section">
+                <div class="info-card">
+                    <div class="info-icon">🧠</div>
+                    <h4>AI-Powered Scoring</h4>
+                    <p>Our AI engine analyzes your on-chain behavior to calculate your trust score</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">⛓️</div>
+                    <h4>Blockchain Secured</h4>
+                    <p>Scores are stored immutably on-chain via our secure oracle system</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">🔐</div>
+                    <h4>Decentralized Trust</h4>
+                    <p>No central authority - your reputation is owned and controlled by you</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>DecentraTrust AI &copy; 2024 | Built for the decentralized future</p>
+            <div class="footer-links">
+                <a href="https://github.com/Madhuram2901/DecentraTrustAI" target="_blank">GitHub</a>
+                <a href="/docs" target="_blank">API Docs</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <span class="toast-icon">ℹ️</span>
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
