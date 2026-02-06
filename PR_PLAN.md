@@ -36,7 +36,7 @@
 ---
 
 ### ✅ PR #2 — Identity Contract
-**Status**: `IN PROGRESS`
+**Status**: `COMPLETE ✅`
 
 **File**: `contracts/Identity.sol`
 
@@ -52,9 +52,9 @@ function getIdentity(address user) external view returns (address, string memory
 ```
 
 **Acceptance Criteria**:
-- [ ] Compiles with no warnings
-- [ ] Can be deployed standalone
-- [ ] No references to other contracts
+- [x] Compiles with no warnings
+- [x] Can be deployed standalone
+- [x] No references to other contracts
 
 ---
 
